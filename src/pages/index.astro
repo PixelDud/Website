@@ -1,0 +1,27 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<img src="/about.png">
+			<h1>Welcome!</h1>
+			<p>
+				You've stumbled upon my little corner of the net! Who am I, you ask?<br>
+				I'm Asher, but I go by PixelDud 'round these parts.
+				I fiddle around with tech, create art, and enjoy playing games from far before my time.
+				I don't quite have a plan for what I'll do on this site, but I'm long overdue to have one.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
