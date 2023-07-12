@@ -1,0 +1,28 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Check out these awesome people!</h1>
+			<ul style="list-style-type: none;">
+				<li>Friends:</li>
+				<ul style="list-style-type: none;">
+					<li><a href="gemini://badtaste.xyz" target="_blank">Bad Taste</a>, a school friend.<br>(I recommend the <a href="https://kristall.random-projects.net/">Kristall</a> and <a href="https://gmi.skyjake.fi/lagrange/">Lagrange</a> browsers.)</li>
+					<li><a href="https://gaffclant.dev/" target="_blank">gaffclant</a>, a work friend.</li>
+
+				</ul>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
