@@ -18,7 +18,7 @@ const blogCollection = defineCollection({
 	}),
 });
 
-const projectsCollection = defineCollection({
+const nemoUpdates = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
@@ -38,5 +38,5 @@ const projectsCollection = defineCollection({
 
 export const collections = {
 	'blog': blogCollection,
-	'project-dir': projectsCollection,
+	'nemo': nemoUpdates,
 };

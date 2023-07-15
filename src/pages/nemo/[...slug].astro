@@ -1,21 +1,21 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
-import ProjectPage from '../../layouts/ProjectPage.astro';
+import NemoUpdates from '../../layouts/NemoUpdates.astro';
 
 export async function getStaticPaths() {
-	const posts = await getCollection('project-dir');
+	const posts = await getCollection('nemo');
 	return posts.map((post) => ({
 		params: { slug: post.slug },
 		props: post,
 	}));
 }
-type Props = CollectionEntry<'project-dir'>;
+type Props = CollectionEntry<'nemo'>;
 
 const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<ProjectPage {...post.data}>
+<NemoUpdates {...post.data}>
 	<h1>{post.data.title}</h1>
 	<Content />
-</ProjectPage>
+</NemoUpdates>
