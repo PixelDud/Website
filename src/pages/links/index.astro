@@ -1,0 +1,28 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>My links.</h1>
+			<ul style="list-style-type: none; font-size: 150%;">
+				<li><a href="https://twitter.com/ThePixelDud" target="_blank">twitter.com</a> (leaving soon)</li>
+				<li><a rel="me" href="https://mastodon.art/@PixelDud" target="_blank">mastodon.art</a></li>
+				<li><a href="https://bsky.app/profile/pixeldud.com" target="_blank">bsky.app</a></li>
+				<li><a href="https://github.com/pixeldud" target="_blank">github.com</a></li>
+				<li><a href="https://store.pixeldud.com" target="_blank">store.pixeldud.com</a></li>
+				<li><a href="/rss.xml" type="_self">rss.xml</a></li>
+			</ul>
+		</main>
+		<Footer />
+	</body>
+</html>
