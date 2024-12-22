@@ -17,28 +17,28 @@ const albums = await getCollection('albums');
 	<body>
 		<Header />
 		<main>
-			<div>
-				<h1>Photo Gallery</h1>
-				<p>A collection of my photos</p>
-			  </div>
-			  <div>
-				{
-				  albums.map((item) => (
-					<a href={`/portfolio/${item.id}`}>
-					  <Image
-						src={item.data.cover}
-						alt={item.data.title}
-                        format="avif"
-						quality="mid"
-					  />
-					  <div>
-						<strong>{item.data.title}</strong>
-						<p>{item.data.description}</p>
-					  </div>
-					</a>
-				  ))
-				}
-			  </div>
+				<div>
+					<h1>Photo Gallery</h1>
+					<p>A collection of my photos</p>
+				</div>
+				<div class="container">
+					{
+						albums.map((item) => (
+							<a href={`/portfolio/${item.id}`}>
+								<div>
+									<Image
+										src={item.data.cover}
+										alt={item.data.title}
+										format="avif"
+										quality="mid"
+									/>
+									<strong>{item.data.title}</strong>
+									<p>{item.data.description}</p>
+								</div>
+							</a>
+						))
+					}
+				</div>
 		</main>
 		<Footer />
 	</body>

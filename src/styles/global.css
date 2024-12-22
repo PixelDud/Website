@@ -6,7 +6,7 @@
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
 	font-family: 'FragmentMono';
-	src: url('/public/fonts/FragmentMono-Regular.ttf');
+	src: url('/fonts/FragmentMono-Regular.ttf');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -16,7 +16,7 @@ body {
 	font-family: FragmentMono;
 	margin: auto;
 	padding: 20px;
-	max-width: 65ch;
+	max-width: 75%;
 	text-align: left;
 	background-color: #0a0a10;
 	word-wrap: break-word;
@@ -71,4 +71,14 @@ blockquote {
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
+}
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 2px;
+}
+.container > div {
+	max-width: 25%;
+	padding: 2px;
+	margin: auto;
 }

@@ -44,19 +44,21 @@ const images = await getAlbumImages(album.id);
                     {album.data.description}
                 </p>
             
-                <div>
+                <div class="container">
                     {
                         images.map((image) => (
-                            <a href={`${image}`}>
+                            <div>
                                 <Image
                                     src={image}
                                     alt={`from ${album.data.title} album`}
                                     format="avif"
-                                    quality={50}
+                                    //quality={25}
+                                    quality="low"
+                                    decoding="async"
                                     loading="lazy"
                                     data-album-image
                                 />
-                            </a>
+                            </div>
                         ))
                     }
                 </div>
